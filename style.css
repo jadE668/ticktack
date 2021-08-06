@@ -1,0 +1,29 @@
+html, body{
+    margin-top:10px;
+    padding:0px;
+}
+.section{
+    text-align: center;
+    margin: auto;
+}
+
+.main{
+    width:600px;
+    height:600px;
+    margin: auto;
+    border: 1px solid black;
+
+}
+
+.square{
+
+    box-sizing: border-box;
+    border: 1px solid black;
+    cursor: pointer;
+    float: left;
+    font-size: 100px;
+    height: 200px;
+    text-align: center;
+    width: 200px;
+    line-height: 200px;
+}
