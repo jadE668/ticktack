@@ -8,7 +8,9 @@ main.addEventListener('click', event => {
             event.target.innerHTML = 'O'
         }
         turn++
-        checkWinner();
+        if (checkWinner() === 0 && turn >=9){
+            alert('Ничья!')
+        }
     }
 })
 
@@ -26,9 +28,11 @@ function checkWinner(){
     ];
     for(i=0; i<array.length; i++){
         if ( boxes[array[i][0]].innerHTML == 'X' && boxes[array[i][1]].innerHTML == 'X' && boxes[array[i][2]].innerHTML == 'X' ){
-            alert('Победили крестики');
+            alert('Победили крестики!');
+            return -1;
         } else if (boxes[array[i][0]].innerHTML == 'O' && boxes[array[i][1]].innerHTML == 'O' && boxes[array[i][2]].innerHTML == 'O'){
-            alert('Победили нолики');
+            alert('Победили нолики!');
+            return 1;
         }
-    }
+    } return 0
 }
